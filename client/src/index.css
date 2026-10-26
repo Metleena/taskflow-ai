@@ -1,0 +1,18 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base {
+  body { @apply bg-page text-ink font-sans antialiased; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-brand; }
+  input, select, textarea { @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm; }
+  input[type=checkbox], input[type=radio] { @apply w-auto; }
+  label { @apply text-sm font-medium; }
+}
+@layer components {
+  .card { @apply rounded-lg border border-line bg-white p-4 sm:p-5; }
+  .btn { @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold disabled:opacity-50; }
+  .btn-primary { @apply btn bg-brand text-white hover:bg-brand-dark; }
+  .btn-ghost { @apply btn border border-line bg-white hover:bg-page; }
+  .btn-danger { @apply btn border border-red-300 bg-white text-red-700 hover:bg-red-50; }
+  .h1 { @apply text-xl font-bold sm:text-2xl; }
+  .h2 { @apply text-base font-bold; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
